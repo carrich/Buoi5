@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var birdIcon: UIImageView!
+    @IBOutlet weak var fieldIcon: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+         self.birdIcon.center.x = self.birdIcon.center.x - 30
+        UIView.animate(withDuration: 2) {
+                  
+            self.birdIcon.center.x = self.birdIcon.center.x + 300
+               }
     }
 
 
